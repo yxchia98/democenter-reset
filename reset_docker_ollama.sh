@@ -2,11 +2,6 @@
 set -euo pipefail
 
 echo "WARNING: This will DELETE Ollama images/models and Docker images/containers/volumes/networks/cache."
-read -rp "Type 'RESET' to continue: " CONFIRM
-if [[ "${CONFIRM:-}" != "RESET" ]]; then
-  echo "Aborting."
-  exit 1
-fi
 
 ############################################
 # OLLAMA RESET: images, models, data
